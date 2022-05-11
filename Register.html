@@ -1,0 +1,52 @@
+<html>
+<head>
+<center><h1>Registration Page</h1></center>
+<script>
+
+function formValidation(){
+
+var name = document.getElementById("name").value;
+
+var gender = document.getElementsByName("gender");
+
+var tr_tags = document.getElementsByTagName("option");
+
+alert(tr_tags.length);
+
+
+}
+
+
+
+</script>
+
+
+
+</head>
+
+<body bgcolor="white">
+<center>
+
+<form method="POST" name="myform">
+<table border="2">
+
+<tr><td>Name:</td> <td><input type="text" name="name" id="name"> </td></tr>
+<tr><td>Gender:</td> <td><input type="radio" name="gender">Male
+<input type="radio" name="gender">Female </td></tr>
+
+<tr><td>Email:</td> <td><input type="text" name="email" id="email"> </td></tr>
+<tr><td>Mobile:</td> <td><input type="text" name="mobile" id="mobile"> </td></tr>
+
+<tr><td><label for="Location">Choose a location:</label></td>
+<td><select name="city">
+<option value="chennai">Chennai</option>
+<option value="bangalore">Bangalore</option>
+<option value="kolkatta">Kolkatta</option>
+<option value="mumbai">Mumbai</option>
+</select></td></tr>
+<tr><td colspan=2 align=center><input type=button value="Submit" onclick="formValidation()"></td></tr>
+</form>
+</table>
+</center>
+</body>
+</html>

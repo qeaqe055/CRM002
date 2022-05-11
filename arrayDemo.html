@@ -1,0 +1,30 @@
+<html>
+<body>
+<script>
+
+var names = ["Dhoni", "Virat", "Rohith", "Kapil"];
+var names2 = ["Ricky", "Harthick"];
+
+names.push("Gavaskar");
+
+var allNames = names.concat(names2);
+
+
+//names.pop();
+names.sort();
+
+document.writeln(names.includes("Dhoni"));
+
+//document.writeln(names[0]);
+//document.writeln(names[1]);
+//document.writeln(names[2]);
+//document.writeln(names[3]);
+
+for(i=0; i<allNames.length; i++){
+document.writeln(allNames[i]);
+}
+
+</script>
+
+</body>
+</html>

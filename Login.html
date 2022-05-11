@@ -1,0 +1,47 @@
+<html>
+<head>
+<center><h1>Login Page</h1></center>
+<title>Login Page</title>
+
+<script>
+
+function validation(){
+
+var id = document.getElementById("loginId").value;
+var pwd = document.getElementById("loginPasswd").value;
+
+if(id==null || id=="")
+{
+alert("Login id should not be empty");
+return false;
+}
+else if(pwd==null || pwd=="")
+{
+alert("Password should not be empty");
+return false;
+
+}
+
+}
+
+
+</script>
+
+
+</head>
+
+<body bgcolor="orange">
+
+<form name = "loginform">
+<center>
+
+User Id <input type="text" id="loginId"><p>
+Password <input type="password" id="loginPasswd"><p>
+<input type="button" value="Login" onclick="validation()">
+
+
+
+</center>	
+</form>
+</body>
+</html>
