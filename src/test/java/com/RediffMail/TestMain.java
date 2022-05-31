@@ -17,7 +17,7 @@ public class TestMain {
 	public WebDriver driver;
 	
 @Parameters("browser")	
-  @BeforeClass(groups = {"Regression"})
+  @BeforeClass(groups= {"SmokeTest"})
   public void browserSetup(String browserName) throws IOException {
 	 
 	  if(browserName.equalsIgnoreCase("chrome")) {
@@ -38,21 +38,21 @@ public class TestMain {
 	  driver.manage().window().maximize();
   }
 
-  @Test(groups= {"Regression"})
+  @Test(priority=0, groups={"SmokeTest"})
   public void verifyTitle() {
-	  String expectedTitle = "Rediff.com: News | Rediffmail | Stock Quotes | Shopping";
+	  String expectedTitle = "Amazon.com. Spend less. Smile more.";
 	  String actualTitle = driver.getTitle();
-	  
-	  Assert.assertEquals(actualTitle, expectedTitle);
+	  //System.out.println(actualTitle);
+	  Assert.assertEquals(expectedTitle, actualTitle);
   }
   
-  @Test(groups= {"Regression"})
+  @Test(priority=1, groups= {"RegressionTest"})
   public void displayCurrentURL() {
 	  String currentURL = driver.getCurrentUrl();
 	  System.out.println(currentURL);
   }
   
-  @Test(groups= {"Regression"})
+  @Test(priority=2, groups= {"RegressionTest"})
   public void searchProduct() {
 	  HomePage hp = new HomePage(driver);
 	  hp.enterProductName();

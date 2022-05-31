@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Parallel test, Regression and Smoke Test]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="ChromeTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="RegressionTest"/>
+        <include name="SmokeTest"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.RediffMail.TestMain">
+        <methods>
+          <include name="verifyTitle"/>
+          <include name="searchProduct"/>
+          <include name="browserSetup"/>
+          <include name="displayCurrentURL"/>
+        </methods>
+      </class> <!-- com.RediffMail.TestMain -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+</suite> <!-- Failed suite [Parallel test, Regression and Smoke Test] -->

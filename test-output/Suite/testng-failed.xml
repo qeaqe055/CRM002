@@ -5,32 +5,17 @@
     <parameter name="browser" value="chrome"/>
     <groups>
       <run>
-        <include name="Regression"/>
+        <include name="RegressionTest"/>
+        <include name="SmokeTest"/>
       </run>
     </groups>
     <classes>
       <class name="com.RediffMail.TestMain">
         <methods>
-          <include name="searchProduct"/>
+          <include name="verifyTitle"/>
           <include name="browserSetup"/>
         </methods>
       </class> <!-- com.RediffMail.TestMain -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
-  <test thread-count="5" name="FirefoxTest(failed)">
-    <parameter name="browser" value="Firefox"/>
-    <groups>
-      <run>
-        <include name="Regression"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="com.RediffMail.TestMain">
-        <methods>
-          <include name="searchProduct"/>
-          <include name="browserSetup"/>
-        </methods>
-      </class> <!-- com.RediffMail.TestMain -->
-    </classes>
-  </test> <!-- FirefoxTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
